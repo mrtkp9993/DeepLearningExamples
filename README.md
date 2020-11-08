@@ -1,5 +1,5 @@
 # DeepLearningExamples
-Deep learning examples with Python and MXNet.
+Deep learning examples with Python.
 
 ## Examples list
 
