@@ -1,9 +1,7 @@
+import numpy as np
 import pandas as pd
-from mxnet import np, npx
-from mxnet.gluon import nn
-npx.set_np()
-
-from helper_functions import *
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import normalize
 
 # Read dataset
 df = pd.read_csv('data/SeoulBikeData.csv',
@@ -21,7 +19,10 @@ df = pd.get_dummies(df, drop_first=True,
                     columns=['Seasons', 'Holiday', 'Functioning Day'])
 
 # Split features, labels
-features = df.drop(columns=['Rented Bike Count']).values
-labels = df['Rented Bike Count'].values
+X = df.drop(columns=['Rented Bike Count']).values.astype(np.float32)
+X = normalize(X)
+y = df['Rented Bike Count'].values.astype(np.float32)
 
-batch_size = 10
+# Split train, test
+X_tr, X_ts, y_tr, y_ts = train_test_split(X, y, test_size=0.3)
+batch_size = 100
