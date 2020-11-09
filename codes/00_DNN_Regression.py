@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.utils import plot_model
+import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 
@@ -30,18 +32,17 @@ X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=['Rented Bik
                                                     test_size=0.3)
 
 # Model
-inputs = keras.Input(shape=(17,))
-x = layers.Dense(128, activation="relu")(inputs)
-x = layers.Dense(256, activation="relu")(x)
-x = layers.Dense(256, activation="relu")(x)
-x = layers.Dense(256, activation="relu")(x)
-outputs = layers.Dense(1)(x)
+model = keras.Sequential()
+model.add(layers.Dense(128, activation="relu", input_shape=(17, )))
+model.add(layers.Dense(256, activation="relu"))
+model.add(layers.Dense(256, activation="relu"))
+model.add(layers.Dense(256, activation="relu"))
+model.add(layers.Dense(1, activation="relu"))
 
-model = keras.Model(inputs=inputs, outputs=outputs, name="dnn_regression")
 model.summary()
 
 # Plot model graph
-keras.utils.plot_model(model, "figs/00_dnn_regression.png", show_shapes=True)
+plot_model(model, "figs/00_dnn_regression.png", show_shapes=True)
 
 # Train model
 model.compile(
