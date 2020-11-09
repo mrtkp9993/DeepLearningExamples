@@ -46,7 +46,7 @@ keras.utils.plot_model(model, "figs/00_dnn_regression.png", show_shapes=True)
 # Train model
 model.compile(
     loss=keras.losses.MeanSquaredError(),
-    optimizer=keras.optimizers.Adam(),
+    optimizer=keras.optimizers.SGD(),
     metrics=["mean_squared_error"],
 )
 
