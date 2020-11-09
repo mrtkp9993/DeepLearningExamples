@@ -32,7 +32,7 @@ X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=['Rented Bik
 
 # Model
 model = keras.Sequential()
-model.add(layers.Dense(128, activation="relu", input_shape=(17, )))
+model.add(layers.Dense(128, activation="relu", input_shape=(df.shape[1]-1, )))
 model.add(layers.Dense(256, activation="relu"))
 model.add(layers.Dense(256, activation="relu"))
 model.add(layers.Dense(256, activation="relu"))
