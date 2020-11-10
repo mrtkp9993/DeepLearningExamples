@@ -2,13 +2,13 @@
 # `Error #15: Initializing libiomp5.dylib, but found libomp.dylib already initialized`
 # Solution: https://stackoverflow.com/questions/53014306/error-15-initializing-libiomp5-dylib-but-found-libiomp5-dylib-already-initial
 import os
+
 os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
-
 
 datagen = ImageDataGenerator(rotation_range=40,
                              width_shift_range=0.2,
@@ -52,8 +52,8 @@ history = model.fit(train_it,
                     epochs=50,
                     callbacks=[keras.callbacks.EarlyStopping(patience=10)])
 
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['val_accuracy'])
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
 plt.title('Model Performance')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
