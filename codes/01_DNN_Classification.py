@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow import keras
 from tensorflow.keras import layers
-from tensorflow.keras.utils import plot_model
 
 # Read Dataset
 df = pd.read_csv("data/SouthGermanCredit.csv", sep=",")
@@ -30,9 +29,6 @@ model.add(layers.Dense(1, activation="sigmoid"))
 
 model.summary()
 
-# Plot model graph
-plot_model(model, "figs/01_dnn_classification.png", show_shapes=True)
-
 # Train model
 model.compile(
     loss=keras.losses.BinaryCrossentropy(),
@@ -51,8 +47,8 @@ test_scores = model.evaluate(X_test, y_test, verbose=2)
 print("Test loss:", test_scores[0])
 print("Test AUC:", test_scores[1])
 
-plt.plot(history.history['AUC'])
-plt.plot(history.history['val_AUC'])
+plt.plot(history.history['auc'])
+plt.plot(history.history['val_auc'])
 plt.title('Model Performance')
 plt.ylabel('AUC')
 plt.xlabel('epoch')
