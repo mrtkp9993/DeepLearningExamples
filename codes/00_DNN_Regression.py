@@ -4,7 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow import keras
 from tensorflow.keras import layers
-from tensorflow.keras.utils import plot_model
 
 # Read dataset
 df = pd.read_csv('data/SeoulBikeData.csv',
@@ -32,16 +31,13 @@ X_train, X_test, y_train, y_test = train_test_split(df.drop(columns=['Rented Bik
 
 # Model
 model = keras.Sequential()
-model.add(layers.Dense(128, activation="relu", input_shape=(df.shape[1]-1, )))
+model.add(layers.Dense(128, activation="relu", input_shape=(df.shape[1] - 1,)))
 model.add(layers.Dense(256, activation="relu"))
 model.add(layers.Dense(256, activation="relu"))
 model.add(layers.Dense(256, activation="relu"))
 model.add(layers.Dense(1, activation="relu"))
 
 model.summary()
-
-# Plot model graph
-plot_model(model, "figs/00_dnn_regression.png", show_shapes=True)
 
 # Train model
 model.compile(
