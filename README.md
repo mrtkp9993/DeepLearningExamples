@@ -18,8 +18,7 @@ scikit_learn==0.23.2
 |[South German Credit Scoring](https://archive.ics.uci.edu/ml/datasets/South+German+Credit+%28UPDATE%29) | Classification | Dense |
 |[Weather Classification](https://data.mendeley.com/datasets/4drtyfjtfy/1)|Image Classification| Convolutional|
 |[CLINC150](https://archive.ics.uci.edu/ml/datasets/CLINC150)|Text Classification|Recurrent|
-|[Metro Interstate Traffic Volume](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume)|Time-series Prediction|LSTM|
-|-|-|GRU|
+|[Metro Interstate Traffic Volume](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume)|Time-series Prediction|GRU|
 |-|-|Bidirectional RNN|
 |-|-|Vanilla Autoencoder|
 |-|-|Variational Autoencoder|
