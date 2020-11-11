@@ -57,8 +57,8 @@ history = model.fit(x_train,
                     validation_data=(x_valid, dummy_y_valid),
                     callbacks=[keras.callbacks.EarlyStopping(patience=5)])
 
-plt.plot(history.history['acc'])
-plt.plot(history.history['val_acc'])
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
 plt.title('Model Performance')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
