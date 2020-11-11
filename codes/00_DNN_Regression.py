@@ -55,7 +55,7 @@ history = model.fit(X_train,
 
 test_scores = model.evaluate(X_test, y_test, verbose=2)
 print("Test loss:", test_scores[0])
-print("Test accuracy:", test_scores[1])
+print("Test MSE:", test_scores[1])
 
 plt.plot(history.history['mean_squared_error'])
 plt.plot(history.history['val_mean_squared_error'])
