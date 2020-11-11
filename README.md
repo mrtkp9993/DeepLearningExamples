@@ -12,7 +12,7 @@ scikit_learn==0.23.2
 
 ## Examples list
 
-|Dataset                            |Task        | Neural Net Structure| 
+|Dataset                            |Task        | Neural Net Structure / Cell Type| 
 |-------                            |----        | ----|
 |[Seoul Bike Sharing Demand Data Set](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand) | Regression | Dense |
 |[South German Credit Scoring](https://archive.ics.uci.edu/ml/datasets/South+German+Credit+%28UPDATE%29) | Classification | Dense |
