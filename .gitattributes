@@ -103,7 +103,7 @@
 *.pyo    binary
 
 # Jupyter notebook
-*.ipynb  text diff=python
+*.ipynb diff=python
 
 # Note: .db, .p, and .pkl files are associated
 # with the python modules ``pickle``, ``dbm.*``,
