@@ -25,4 +25,4 @@
 *.pyo    binary
 
 # Jupyter notebook
-*.ipynb linguist-vendored=false
+notebooks/* linguist-vendored=false
