@@ -27,8 +27,7 @@ You can run notebooks on Colab:
 |[Weather Classification](https://data.mendeley.com/datasets/4drtyfjtfy/1)|Image Classification| Convolutional|
 |[CLINC150](https://archive.ics.uci.edu/ml/datasets/CLINC150)|Text Classification|Recurrent, Bidirectional Recurrent|
 |[Metro Interstate Traffic Volume](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume)|Time-series Prediction|GRU|
-|[Breast Cancer Wisconsin (Original)](http://odds.cs.stonybrook.edu/breast-cancer-wisconsin-original-dataset/)|Anomaly Detection|Vanilla Autoencoder|
-|-|-|Variational Autoencoder|
+|[Breast Cancer Wisconsin (Original)](http://odds.cs.stonybrook.edu/breast-cancer-wisconsin-original-dataset/)|Anomaly Detection|Vanilla Autoencoder, Variational Autoencoder|
 |-|-|GAN|
 |-|-|Multi Input|
 |-|-|Multi Output|
