@@ -103,8 +103,8 @@ plt.show()
 # I'll choose threshold as median loss
 threshold = np.median(train_mae_loss)
 print("Reconstruction error threshold: ", threshold)
-false_alarms = train_mae_loss > np.median(history.history['loss'])
-anomalies = outlier_mae_loss > np.median(history.history['loss'])
+false_alarms = train_mae_loss > threshold
+anomalies = outlier_mae_loss > threshold
 print("Number of anomaly samples: ", np.sum(anomalies))
 print("Indices of anomaly samples: ", np.where(anomalies))
 
