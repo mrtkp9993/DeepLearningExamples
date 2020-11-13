@@ -4,9 +4,11 @@ Deep learning examples with Python.
 ## Requirements
 
 ```
+numpy==1.18.5
+scipy==1.5.2
 tensorflow==2.2.0
-matplotlib==3.2.2
 pandas==1.0.5
+matplotlib==3.2.2
 scikit_learn==0.23.2
 ```
 
