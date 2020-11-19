@@ -29,6 +29,12 @@ You can run notebooks on Colab:
 |[Metro Interstate Traffic Volume](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume)|Time-series Forecasting|GRU|
 |[Breast Cancer Wisconsin (Original)](http://odds.cs.stonybrook.edu/breast-cancer-wisconsin-original-dataset/)|Anomaly Detection|Vanilla Autoencoder, Variational Autoencoder|
 
+## Examples from my another repositories
+
+|Dataset|Notebook|Task|NN Structure|
+|-------|--------|----|------------|
+|[Labeled Optical Coherence Tomography (OCT) and Chest X-Ray Images for Classification](https://data.mendeley.com/datasets/rscbjbr9sj/2)|[Jupyter](https://nbviewer.jupyter.org/github/mrtkp9993/PneumoniaDetectionDeepLearning/blob/main/notebook_wip.ipynb) - [Repo](https://github.com/mrtkp9993/PneumoniaDetectionDeepLearning)|Image classification - Medical diagnosis|Convolutional Neural Network|
+
 ## Resources
 
 * https://keras.io/examples/
