@@ -1,6 +1,8 @@
 # DeepLearningExamples
 Deep learning examples with Python.
 
+[![DOI](https://zenodo.org/badge/311097910.svg)](https://zenodo.org/badge/latestdoi/311097910)
+
 ## Requirements
 
 ```
